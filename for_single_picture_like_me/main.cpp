@@ -19,7 +19,6 @@ void process(Mat frame)
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
     face_cascade.detectMultiScale(frame_gray, faces, 1.1, 5, CV_HAAR_SCALE_IMAGE, Size(30, 30));
-    
     for (size_t i = 0; i < faces.size(); i++)
     {
         Point center;
