@@ -43,6 +43,7 @@ void process(Mat frame)
         signal.copyTo(imageROI, mask);
     }
     imshow("Face Detection", frame);
+    waitKey(0);
 }
 
 int main(int argc, char *argv[])
@@ -56,6 +57,5 @@ int main(int argc, char *argv[])
     if (frame.empty())
         ERROR;
     process(frame);
-    waitKey(0);
     return 0;
 }
