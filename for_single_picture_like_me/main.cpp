@@ -9,7 +9,7 @@ using namespace cv;
 
 String face_cascade_name = "C:\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml";
 CascadeClassifier face_cascade;
-String window_name = "Face detection";
+String window_name = "result";
 
 void process(Mat frame)
 {
