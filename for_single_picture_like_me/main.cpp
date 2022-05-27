@@ -46,11 +46,11 @@ void process(Mat frame)
 }
 
 int main(int argc, char *argv[])
-{
-    Mat frame;
+{ 
     if (!face_cascade.load(face_cascade_name))
         ERROR;
     cout << "wait for it" << endl;
+    Mat frame;
     String Target = "123.jpeg";
     frame = imread(Target);
     if (frame.empty())
