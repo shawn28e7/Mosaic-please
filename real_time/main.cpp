@@ -14,7 +14,6 @@ void process(Mat frame)
 {
     std::vector<Rect> faces;
     Mat frame_gray, frame_resize;
-    int radius;
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
     face_cascade.detectMultiScale(frame_gray, faces, 1.1, 5, CV_HAAR_SCALE_IMAGE, Size(30, 30));
