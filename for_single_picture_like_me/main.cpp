@@ -35,11 +35,10 @@ void process(Mat frame)
         resize(signal, signal, Size(w, h), INTER_LINEAR);
         resize(mask, mask, Size(w, h), INTER_LINEAR);
         Rect rect(0, 0, std::min(w, frame.rows - posx - 1), std::min(h, frame.cols - posy - 1));
-        signal = signal(rect);
-        mask = mask(rect);
         w = std::min(w, frame.rows - posx - 1);
         h = std::min(h, frame.cols - posy - 1);
         Mat imageROI = frame(Rect(posx, posy, w, h));
+        
         signal.copyTo(imageROI, mask);
     }
     imshow("Face Detection", frame);
@@ -48,9 +47,10 @@ void process(Mat frame)
 
 int main(int argc, char *argv[])
 { 
+    cout << "wait for it" << endl;
     if (!face_cascade.load(face_cascade_name))
         ERROR;
-    cout << "wait for it" << endl;
+    
     Mat frame;
     String Target = "123.jpeg";
     frame = imread(Target);
