@@ -1,4 +1,3 @@
-/** FaceDetection.cpp **/
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <stdio.h>
@@ -13,8 +12,7 @@ String window_name = "Face detection";
 
 void process(Mat frame)
 {
-    /* Declare vector for faces and eyes */
-    std::vector<Rect> faces, eyes, smiles;
+    std::vector<Rect> faces;
     Mat frame_gray, frame_resize;
     int radius;
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
