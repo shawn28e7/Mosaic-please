@@ -44,7 +44,7 @@ void process(Mat frame)
 int main(int argc, char *argv[])
 {
     VideoCapture capture = VideoCapture(0);
-    Mat frame, image;
+    Mat frame;
 
     if (!face_cascade.load(face_cascade_name))
         ERROR;
