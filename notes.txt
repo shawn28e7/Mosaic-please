@@ -1,1 +1,2 @@
-please make sure you're already install OpenCV and check if the path is right before clicjing the compile botton.
+Please make sure you're already install OpenCV and check if the path is right before clicking the compile botton.
+Sorry for bad file names and grammer.
