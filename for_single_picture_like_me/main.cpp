@@ -4,7 +4,7 @@
 
 using namespace std;
 using namespace cv;
-#define ERROR cout << "Error on line " << __LINE__ << endl;
+#define ERROR cout << "Error on line " << __LINE__ << endl; system("pause");
 
 String face_cascade_name = "C:\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml";
 CascadeClassifier face_cascade;
