@@ -1,0 +1,1 @@
+please make sure you're already install OpenCV and check if the path is right before compiling.
