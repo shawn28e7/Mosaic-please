@@ -41,7 +41,7 @@ void process(Mat frame)
     imshow("Face Detection", frame);
 }
 
-int main(int argc, char *argv[])
+int main()
 { 
     cout << "wait for it" << endl;
     if (!face_cascade.load(face_cascade_name))
