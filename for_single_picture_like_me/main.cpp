@@ -22,7 +22,6 @@ void process(Mat frame)
     face_cascade.detectMultiScale(frame_gray, faces, 1.1, 5, CV_HAAR_SCALE_IMAGE, Size(30, 30));
     for (size_t i = 0; i < faces.size(); i++)
     {
-        Point center;
         Mat faceROI = frame_gray(faces[i]);
         String cover = "248596880_243152237800419_5280981397072697475_n.jpg"; // your "mask" goes here
         Mat signal = imread(cover), mask = imread(cover, 0);
@@ -30,7 +29,6 @@ void process(Mat frame)
         w = faces[i].width;
         h = faces[i].height;
         size_t posx, posy;
-        size_t k = 7;
         posx = std::max(1, faces[i].x);
         posy = std::max(1, faces[i].y);
         resize(signal, signal, Size(w, h), INTER_LINEAR);
