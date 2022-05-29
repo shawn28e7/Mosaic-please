@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
         ERROR;
     }
     Mat frame;
-    String Target = "3323502.jpg";
+    String Target = "3323502.jpg"; //Target picture here
     frame = imread(Target);
     if (frame.empty())
     {
