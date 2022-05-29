@@ -43,7 +43,7 @@ void process(Mat frame)
     waitKey(0);
 }
 
-int main(int argc, char *argv[])
+int main()
 {
     cout << "wait for it" << endl;
     if (!face_cascade.load(face_cascade_name))
