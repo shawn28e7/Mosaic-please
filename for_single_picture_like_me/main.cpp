@@ -1,4 +1,3 @@
-/** FaceDetection.cpp **/
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <stdio.h>
@@ -51,7 +50,7 @@ int main(int argc, char *argv[])
     if (!face_cascade.load(face_cascade_name))
         ERROR;
     cout << "wait for it" << endl;
-    String Target = "2.jpg";
+    String Target = "123.jpeg";
     frame = imread(Target);
     if (frame.empty())
         ERROR;
