@@ -10,7 +10,7 @@ using namespace cv;
 
 String face_cascade_name = "C:\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml";
 CascadeClassifier face_cascade;
-String window_name = "result";
+String window_name = "mosaic-please";
 
 void process(Mat frame)
 {
@@ -40,7 +40,7 @@ void process(Mat frame)
         Mat imageROI = frame(Rect(posx, posy, w, h));
         signal.copyTo(imageROI, mask);
     }
-    imshow("Face Detection", frame);
+    imshow(window_name, frame);
 }
 
 int main()
