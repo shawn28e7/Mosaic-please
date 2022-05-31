@@ -33,8 +33,6 @@ void process(Mat frame)
         resize(signal, signal, Size(w, h), INTER_LINEAR);
         resize(mask, mask, Size(w, h), INTER_LINEAR);
         Rect rect(0, 0, std::min(w, frame.rows - posx - 1), std::min(h, frame.cols - posy - 1));
-        signal = signal(rect);
-        mask = mask(rect);
         w = std::min(w, frame.rows - posx - 1);
         h = std::min(h, frame.cols - posy - 1);
         Mat imageROI = frame(Rect(posx, posy, w, h));
